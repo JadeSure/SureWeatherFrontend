@@ -21,7 +21,7 @@ export default function CurrentWeather() {
 
     const [city, setCity] = useState({
         cityName: 'melbourne',
-        countryCode: ''
+        countryCode: 'au'
     })
     const [weatherData, setWeatherData] = useState({})
     const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString())
