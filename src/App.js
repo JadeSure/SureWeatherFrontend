@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import Login from './components/Login'
 import './App.css';
+import CurrentWeather from './components/CurrentWeather'
+import WeatherPrediction from './components/WeatherPrediction'
+import { Route, Routes } from 'react-router-dom'
+import Error from './screen/Error'
+import Signup from './components/SignUp'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=".container">
+      {/* <Header /> */}
+      {/* <Login /> */}
+
+      {/* <RainBarChart /> */}
+      {/* <Test /> */}
+
+      <Routes>
+        <Route path='/' element={<CurrentWeather />} />
+        <Route path='/welcome' element={<WeatherPrediction />} />
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/signup' element={<Signup />}></Route>
+        <Route path="*" element={<Error />}></Route>
+      </Routes>
+
+
     </div>
   );
 }
